@@ -21,6 +21,7 @@ public class Main {
             }else {
                 map.put(nums[i],i);
             }
+
         }
     }
 }
