@@ -37,13 +37,41 @@ public class TwoSum {
 
         TwoSum obj = new TwoSum();
 
-        int nums[] = {2,7,11,15};
+        // Test 1
+        int[] nums1 = {2, 7, 11, 15};
+        int target1 = 9;
 
-            int target = 13;
+        int[] result1 = obj.optimized(nums1, target1);
+        System.out.println("Test 1: " + result1[0] + ", " + result1[1]);
 
-        int[] result = obj.bruteForce(nums,target);
-        int[] resultOptimized = obj.optimized(nums,target);
-        System.out.println("result :"+result[0]+" "+result[1]);
-        System.out.println("resultOptimized :"+resultOptimized[0]+" "+resultOptimized[1]);
+        // Test 2 - Duplicate values
+        int[] nums2 = {3, 3};
+        int target2 = 6;
+
+        int[] result2 = obj.optimized(nums2, target2);
+        System.out.println("Test 2: " + result2[0] + ", " + result2[1]);
+
+
+        // Test 3 - Negative numbers
+        int[] nums3 = {-3, 4, 3, 90};
+        int target3 = 0;
+
+        int[] result3 = obj.optimized(nums3, target3);
+        System.out.println("Test 3: " + result3[0] + ", " + result3[1]);
+
+        // Test 4 - Solution at the end
+        int[] nums4 = {1, 5, 8, 12};
+        int target4 = 20;
+
+        int[] result4 = obj.optimized(nums4, target4);
+        System.out.println("Test 4: " + result4[0] + ", " + result4[1]);
+
+
+        // Test 5 - No solution
+        int[] nums5 = {1, 2, 3};
+        int target5 = 100;
+
+        int[] result5 = obj.optimized(nums5, target5);
+        System.out.println("Test 5: " + result5[0] + ", " + result5[1]);
     }
 }
