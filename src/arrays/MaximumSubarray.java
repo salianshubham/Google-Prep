@@ -26,6 +26,10 @@ public class MaximumSubarray {
 
     // Optimized
     public int optimized(int[] nums) {
+        if(nums.length==0){
+            return -999999999;
+        }
+
         int currentSum = nums[0];
         int maxSum = nums[0];
 
@@ -58,16 +62,21 @@ public class MaximumSubarray {
         // Test 3
         int[] nums3 = {-1,-2,-3};
         System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums3));
-        System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums3));
+        System.out.println("Test Case Of optimized: "+obj.optimized(nums3));
 
         // Test 4
         int[] nums4 = {5,4,-1,7,8};
         System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums4));
-        System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums4));
+        System.out.println("Test Case Of optimized: "+obj.optimized(nums4));
 
         // Test 5
         int[] nums5 = {};
         System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums5));
-        System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums5));
+        System.out.println("Test Case Of optimized: "+obj.optimized(nums5));
+
+        // Test 6
+        int[] nums6 = {5, 2, -4, 6, 3, -20, 4, 10};
+        System.out.println("Test Case Of Brute Force: "+obj.bruteForce(nums6));
+        System.out.println("Test Case Of optimized: "+obj.optimized(nums6));
     }
 }
